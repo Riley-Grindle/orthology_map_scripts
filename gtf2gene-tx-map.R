@@ -19,7 +19,7 @@ if (is.na(file_path) || file_path == "-help" || file_path == "-h"){
   quit(save="no")
 }
 
-gtf <- import.gff("AmexT_v47-AmexG_v6.0-DD.gtf")
+gtf <- import.gff(file_path)
 mapping <- data.frame(
   transcript_id = mcols(gtf)$transcript_id,
   gene_id = mcols(gtf)$gene_id
