@@ -66,7 +66,7 @@ new_table <- newest_table[,-1]
 colnames(new_table) <- c("QUERY", "MATCH")
 
 
-write.csv(new_table, file = "./ortho_l_std.csv", col.names = TRUE, row.names = FALSE)
+write.csv(new_table, file = "./ortho_l_std.csv", row.names = FALSE)
 
 
 

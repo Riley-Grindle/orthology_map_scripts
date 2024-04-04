@@ -89,6 +89,6 @@ newest_table <- cbind(new_table, unlist(gene_list), unlist(taxa_list))
 colnames(newest_table) <- c("QUERY", "MATCH", "GENE", "SPECIES")
 
 
-write.csv(newest_table, file = "./ortho_l_std.csv", col.names = TRUE, row.names = FALSE)
+write.csv(newest_table, file = "./ortho_l_std.csv", row.names = FALSE)
 
 

@@ -123,4 +123,4 @@ colnames(newest_table) <- c("QUERY", "MATCH", "GENE", "SPECIES")
 
 
 
-write.csv(newest_table, file = "./ortho_f_std.csv", col.names = TRUE, row.names = FALSE)
+write.csv(newest_table, file = "./ortho_f_std.csv", row.names = FALSE)

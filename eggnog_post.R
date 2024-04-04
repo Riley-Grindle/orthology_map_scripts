@@ -28,7 +28,7 @@ new_table <- raw_table[-c(((nrow(raw_table)-2):(nrow(raw_table)))),-c(3:ncol(raw
 
 colnames(new_table) <- c("QUERY", "MATCH")
 
-write.csv(new_table, file = "./eggnog_std.csv", col.names = TRUE, row.names = FALSE)
+write.csv(new_table, file = "./eggnog_std.csv", row.names = FALSE)
 
 
 

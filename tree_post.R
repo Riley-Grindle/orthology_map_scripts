@@ -61,7 +61,7 @@ for (i in 1:nrow(raw_table)){
 
 colnames(new_table) <- c("QUERY", "MATCH")
 
-write.csv(new_table, file = "./tree_std.csv", col.names = TRUE, row.names = FALSE)
+write.csv(new_table, file = "./tree_std.csv", row.names = FALSE)
 
 
 
