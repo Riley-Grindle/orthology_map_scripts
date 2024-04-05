@@ -49,7 +49,6 @@ for (i in 1:nrow(new_table)){
   group <- new_table[,1][i]
   for (j in 1:nrow(raw_table)){
     if (raw_table[,1][j] == group){
-      print(group)
       if (key == 0){
         newest_table <- rbind(newest_table, c(group, new_table[,2][i], substr(raw_table[,2][j], 1, nchar(raw_table[,2][j]))))
         key = 1
