@@ -85,7 +85,9 @@ for (i in 1:nrow(new_table)) {
   if (str_list[1] != "    "){
     for (j in 1:length(str_list)){
       temp_df <- data.frame(str_list[j], new_table[non_na_list[start]:non_na_list[stop]-1, 2])
-      temp_df[2:nrow(temp_df),1] <- "  "
+      if (nrow(temp_df) > 1 ) {
+          temp_df[2:nrow(temp_df),1] <- "  "
+      }
       colnames(temp_df) <- c("QUERY", "MATCH")
       if (key){
         temp_df[2,1] <- temp_df[1,1]
