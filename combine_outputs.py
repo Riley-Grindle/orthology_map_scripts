@@ -13,7 +13,7 @@ def main():
     with open(sys.argv[1], "r") as agg:
         try:
             aggregate  = json.load(agg)
-
+            
         except json.decoder.JSONDecodeError :
             agg.close()
             with open(sys.argv[1], "w") as output:
@@ -22,7 +22,10 @@ def main():
             exit()
 
     for gene, matches in comparison.items():
-        
+       
+        if gene == 'tool':
+            continue
+ 
         if not gene in list(aggregate.keys()):
             aggregate[gene] = matches
 
