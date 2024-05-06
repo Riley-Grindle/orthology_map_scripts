@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/Users/rgrindle/miniforge3/bin/python3
 
 
 import sys
@@ -58,7 +58,7 @@ def main():
     aggregate_file.close()
 
     formatted_comp = tuplify(comparison, comparison["tool"])
-    new_aggregate  = combine(aggregate, comparison)
+    new_aggregate  = combine(aggregate, formatted_comp)
 
     with open(sys.argv[2], "w") as outfile:
         json.dump(new_aggregate, outfile, indent=4)
